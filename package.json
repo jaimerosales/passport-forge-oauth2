@@ -1,0 +1,45 @@
+{
+  "name": "passport-forge-oauth2",
+  "version": "1.0.0",
+  "description": "Autodesk Forge OAuth2 authentication strategy for Passport.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jaimerosales/passport-forge-oauth2.git"
+  },
+  "main": "./lib/passport-forge-oauth2",
+  "dependencies": {
+    "pkginfo": "0.2.x",
+    "body-parser": "^1.15.0",
+    "cookie-parser": "1.4.3",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "express-partials": "^0.3.0",
+    "express-session": "^1.14.0",
+    "forge-oauth2": "^1.0.2",
+    "forge-oauth2": "1.0.1",
+    "method-override": "2.3.6",
+    "passport": "^0.3.2",
+    "passport-oauth2": "^1.3.0",
+    "request": "^2.34.0"
+  },
+  "engines": { 
+    "node": ">=4.0.0" 
+  },
+  "contributors": [
+    "Jaime Rosales <jaime.rosales.duque@autodesk.com>",
+    "Sarat Venugopal <sarat.venugopal@autodesk.com>"
+  ],
+  "licenses": [ {
+    "type": "MIT",
+    "url": "http://www.opensource.org/licenses/MIT"
+  } ],
+  "keywords": [
+    "passport", 
+    "forge", 
+    "autodesk", 
+    "oauth2", 
+    "authentication", 
+    "identity",
+    "passport"
+  ]
+}
