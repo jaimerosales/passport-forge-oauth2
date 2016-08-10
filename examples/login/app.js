@@ -25,9 +25,9 @@ passport.deserializeUser(function (user, done) {
   done(null, user);
 });
 
-var ADSK_FORGE_CLIENT_ID = "--insert-adskforge-client-id-here--"
-  , ADSK_FORGE_CLIENT_SECRET = "--insert-adskforge-client-secret-here--"
-  , ADSK_FORGE_CALLBACK_URL = "--insert-adskforge-callback-url-here--";
+var ADSK_FORGE_CLIENT_ID = "SdeGOaipH6SotGj3Ww307fZwLh2hLnW3"
+  , ADSK_FORGE_CLIENT_SECRET = "tuCdWxVVpGBugiEE"
+  , ADSK_FORGE_CALLBACK_URL = "http://localhost:3000/oauth";
 
 var options =
   {
@@ -59,7 +59,7 @@ app.use(bodyParser.json());
 
 // Parse forms (signup/login)
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+//app.use(bodyParser.json());
 app.use(methodOverride());
 // Initalize session with approprite params or it will fail!
 app.use(passport.initialize());
@@ -95,9 +95,10 @@ app.get('/login-forge',
 });
 
 /// The passport Forge strategy 
-app.get('/oauth/callback',
+app.get('/oauth',
   passport.authenticate('adskForge', { failureRedirect: '/login' }),
   function (req, res) {
+    console.log('Inside of Callback');
     var temp = req.session.passport;
     req.session.regenerate(function (err) {
       req.session.passport = temp; // restore passport
