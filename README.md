@@ -22,7 +22,7 @@ The Autodesk Forge authentication strategy authenticates users using a Forge acc
 The Strategy is based in a Three Legged token authentication where Scopes need to be define. To get started and find out more about it [click here](https://developer.autodesk.com/en/docs/oauth/v2/tutorials/get-3-legged-token/)
 
     var ADSK_FORGE_CLIENT_ID = "--insert-adskforge-client-id-here--"
-    , ADSK_FORGE_CLIENT_SECRET = "--insert-adskforge-client-secret-here--",
+    , ADSK_FORGE_CLIENT_SECRET = "--insert-adskforge-client-secret-here--"
     , ADSK_FORGE_CALLBACK_URL = "--insert-adskforge-callback-url-here--";
 
     var options =
